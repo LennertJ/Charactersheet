@@ -1,0 +1,21 @@
+.attack{
+    display: grid;
+    grid-auto-flow: column;  
+    grid-template-columns: 40% 15% 43%;
+    column-gap: 1%;
+}
+
+.attack>span{
+    background-color: lightgray;
+    padding-left:5px;
+}
+
+.attack>span:nth-child(2){
+    text-align: center;
+    padding-left:0;
+}
+
+.extraInfo{
+    margin-left:10px;
+    overflow: hidden;
+}

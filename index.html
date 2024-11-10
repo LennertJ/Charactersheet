@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#db4938">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/attack.css">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="img/192x192.png">
+  <title>Phoenix</title>
+</head>
+
+<div class="mainStats">
+  <div>
+    <svg width="64" height="64" fill="currentColor" class="bi bi-shield" viewBox="0 0 16 16">
+      <path
+        d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+      <text x="2" y="8" fill="currentColor" font-size="4">
+        <tspan id="baseAc"></tspan>(<tspan id="acModifier"></tspan>)
+      </text>
+    </svg>
+  </div>
+
+  <svg path="http: //www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+    <path
+      d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+    <text x="6" y="8" fill="currentColor" font-size="4">
+      <tspan id="hp"></tspan>
+    </text>
+    </svg>
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="54" fill="currentColor" class="bi bi-speedometer2"
+        viewBox="0 0 16 16">
+        <path
+          d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
+      </svg>
+      <p id="speed">30 (+10)</p>
+    </div>
+</div>
+
+<div id="statRow">
+  <details class="statbox">
+    <summary class="statSummary">
+      <score-tag class="abilityScore" score="18" label="Inteligence"></score-tag>
+    </summary>
+    <div class="throwbox">
+      <section>
+        <input type="checkbox" checked class="saveCheck">
+        <p class="numberField" id="intSave"></p>
+        <label>Int Save</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="arcana"></p>
+        <label>Arcana</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="history"></p>
+        <label>History</label>
+      </section>
+      <section>
+        <input type="radio" checked class="saveCheck expertise">
+        <p class="numberField" id="investigation"></p>
+        <label>Investigation</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="nature"></p>
+        <label>Nature</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="religion"></p>
+        <label>Religion</label>
+      </section>
+    </div>
+  </details>
+  <details class="statbox">
+    <summary class="statSummary">
+      <score-tag class="abilityScore" score="16" label="Dexterity"></score-tag>
+    </summary>
+    <div class="throwbox">
+      <section>
+        <input type="checkbox" checked class="saveCheck">
+        <p class="numberField" id="dexSave"></p>
+        <label>Dex Save</label>
+      </section>
+      <section>
+        <input type="radio" checked class="saveCheck">
+        <p class="numberField" id="acrobatics"></p>
+        <label>Acrobatics</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="sleightOfHand"></p>
+        <label>Sleight of Hand</label>
+      </section>
+      <section>
+        <input type="radio" checked class="saveCheck">
+        <p class="numberField" id="stealth"></p>
+        <label>Stealth</label>
+      </section>
+    </div>
+  </details>
+  <details class="statbox">
+    <summary class="statSummary">
+      <score-tag class="abilityScore" score="12" label="Charisma"></score-tag>
+    </summary>
+    <div class="throwbox">
+      <section>
+        <input type="checkbox" checked class="saveCheck">
+        <p class="numberField" id="chaSave"></p>
+        <label>Charisma Save</label>
+      </section>
+      <section>
+        <input type="radio" checked class="saveCheck">
+        <p class="numberField" id="deception"></p>
+        <label>Deception</label>
+      </section>
+      <section>
+        <input type="radio" checked class="saveCheck expertise">
+        <p class="numberField" id="intimidation"></p>
+        <label>Intimidation</label>
+      </section>
+      <section>
+        <input type="radio" checked class="saveCheck">
+        <p class="numberField" id="performance"></p>
+        <label>Performance</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="persuasion"></p>
+        <label>Persuasion</label>
+      </section>
+    </div>
+  </details>
+  <details class="statbox">
+    <summary class="statSummary">
+      <score-tag class="abilityScore" score="12" label="Constitution"></score-tag>
+    </summary>
+    <div class="throwbox">
+      <section>
+        <input type="checkbox" checked class="saveCheck">
+        <p class="numberField" id="conSave"></p>
+        <label>Con Save</label>
+      </section>
+    </div>
+  </details>
+  <details class="statbox">
+    <summary class="statSummary">
+      <score-tag class="abilityScore" score="10" label="Strength"></score-tag>
+    </summary>
+    <div class="throwbox">
+      <section>
+        <input type="checkbox" class="saveCheck">
+        <p class="numberField" id="strSave"></p>
+        <label>Strength Save</label>
+      </section>
+      <section>
+        <input type="radio" checked class="saveCheck">
+        <p class="numberField" id="athletics"></p>
+        <label>Athletics</label>
+      </section>
+    </div>
+  </details>
+  <details class="statbox">
+    <summary class="statSummary">
+      <score-tag class="abilityScore" score="8" label="Wisdom"></score-tag>
+    </summary>
+    <div class="throwbox">
+      <section>
+        <input type="checkbox" class="saveCheck">
+        <p class="numberField" id="wisSave"></p>
+        <label>Wisdom Save</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="animalHandling"></p>
+        <label>Animal handeling</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="insight"></p>
+        <label>Insight</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="medicine"></p>
+        <label>Medicine</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="perception"></p>
+        <label>Perception</label>
+      </section>
+      <section>
+        <input type="radio" class="saveCheck">
+        <p class="numberField" id="survival"></p>
+        <label>Survival</label>
+      </section>
+    </div>
+  </details>
+</div>
+<details>
+  <summary class="grbg">attacks</summary>
+  <attack-tag weapon="Scimitar" bonusToAttack="+8" damageDice="1d6" damageModifier="+5" damageType="Slashing"></attack-tag>
+  <attack-tag weapon="Shortsword" bonusToAttack="+7" damageDice="1d6" damageModifier="+4" damageType="Piercing"></attack-tag>
+  <attack-tag weapon="Dagger" bonusToAttack="+7" damageDice="1d4" damageModifier="+4" damageType="Piercing"></attack-tag>
+  <attack-tag weapon="Booming blade" bonusToAttack="+8" damageDice="1d8"damageType="Thunder"></attack-tag>
+  <attack-tag weapon="Green-flame blade" bonusToAttack="+8" damageDice="2d8"damageType="Fire" notes="Damage jumps to 1 creature within 5ft of target"></attack-tag>
+  <attack-tag weapon="Toll the dead" DC="15" damageDice="2d8/2d12"damageType="Necrotic" notes="wis save"></attack-tag>
+  <attack-tag weapon="Hellish Rebuke" DC="15" damageDice="3d10" damageType="Fire" notes="dex save"></attack-tag>
+  <attack-tag weapon="Shocking Grasp" bonusToAttack="+8" damageDice="1d8" damageType="Lightning"></attack-tag>
+  <attack-tag weapon="Chromatic Orb" bonusToAttack="+8" damageDice="3d8" damageType="Variable" range="90ft"
+    notes="damagetypes: Acid, Cold Fire, lightning, poison or thunder"></attack-tag>
+    <attack-tag weapon="Vampiric Touch" bonusToAttack="+8" damageDice="3d6" damageType="Lightning" notes="concentration 1 minute, you can reuse the attack while active"></attack-tag>
+  <attack-tag weapon="Lightning Bolt" DC="15" damageDice="8d6" damageType="Lightning" range="100ft" notes="dex save"></attack-tag>
+  <attack-tag weapon="Thunder Step" DC="15" damageDice="3d10" damageType="Lightning" range="100ft" notes="con save"></attack-tag>
+  <attack-tag weapon="Storm Sphere" DC="15" damageDice="2d6" damageType="Bludgeoning" range="150ft" notes="concentration 1 minute, creatures inside a 20ft-radius square must make a saving throw or take damage. The area is difficult terrain, you can use a bonus-action to make lightning leap from the sphere. Creatures within 30 ft have disadvantage on perception checks."></attack-tag>
+  <attack-tag weapon="Storm Sphere (bonus action)" bonusToAttack="+8" damageDice="4d6" damageType="Lightning" range="60ft" notes="You have advantage on creatures inside the sphere"></attack-tag>
+  <attack-tag weapon="Magic Missle" damageDice="1d4" damageModifier="+1" damageType="Force"></attack-tag>
+</details><br />
+<details>
+  <summary class="grbg">proficiencies</summary>
+  <p class="width99">Common, Elvish, Infernal, Thieves' Cant</p>
+  <p class="width99">Poiseners kit, Thieves' Tools</p>
+  <p class="width99">Simple Weapons</p>
+  <p class="width99">Light Armour</p>
+  <p class="width99">Rapier, Scimitar</p>
+  <p class="width99">Longsword, shortsword</p>
+</details><br />
+<details>
+  <summary class="grbg">Bag (<span id="barki"></span> gp)</summary>
+  <p class="width99">Spellbook, Diamond worth 50gp</p>
+  <p class="width99">2 Daggers, 1 Shortsword & 1 Scimitar+1</p>
+  <p class="width99">Studded Leather Armour</p>
+  <p class="width99">Leather Armour</p>
+  <p class="width99">Poiseners kit, Thieves' Tools</p>
+  <details>
+    <summary class="width99">Laminin Oak Imbued Scimitar</summary>
+    <p class="width99 ExtraInfo">
+      When you cast a damage-dealing spell using this item as your spellcasting focus,
+      you gain a +1 bonus to one lightning or thunder damage roll of the spell.
+    </p>
+  </details>
+  <p class="width99">Some Clothes</p>
+  <p class="width99">A full Explorers Pack</p>
+  <p class="width99">Winter clothes</p>
+  <p class="width99">1 vials Giant scorpion Venom (2d10)</p>
+  <p class="width99"> 300 gp worth of ink</p>
+</details><br />
+<details>
+  <summary class="grbg">Extra</summary>
+  <p class="width99">Sneak Attack (1d6)</p>
+  <p class="width99">Extra Attack (one attack can be a cantrip)</p>
+  <p class="width99">Hellish Resistance (resistant to fire Damage)</p>
+  <p class="width99">60 ft Darkvision</p>
+  <details>
+    <!--arcane Recovery-->
+    <summary class="width99">Arcane Recovery</summary>
+    <p class="width99 ExtraInfo">
+      You have learned to regain some of your magical energy by studying your spellbook.
+      Once per day when you finish a short rest, you can choose expended spell slots to recover.
+      The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up),
+      and none of the slots can be 6th level or higher. For example, if you’re a 4th-level wizard,
+      you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or
+      two 1st-level spell slots.
+    </p>
+  </details>
+  <details>
+    <!-- Blade Song -->
+    <summary class="width99">Blade Song (<span class="bladeSongModifier"></span>)</summary>
+    <article class="width99 ExtraInfo">
+      You can use a bonus action to start the Bladesong, which lasts for 1 minute. It ends early if you are
+      incapacitated,
+      if you don medium or heavy armor or a shield, or if you use two hands to make an attack with a weapon.
+      You can also dismiss the Bladesong at any time (no action required).
+      While your Bladesong is active, you gain the following benefits:
+      <ul>
+        <li>You gain a bonus to your AC equal to your Intelligence modifier (+<span class="bladeSongModifier"></span>)</li>
+        <li>Your walking speed increases by 10 feet.</li>
+        <li>You have advantage on Dexterity (Acrobatics) checks.</li>
+        <li> You gain a bonus to any Constitution saving throw you make to maintain your concentration on a spell. The
+          bonus equals your Intelligence modifier (+<span class="bladeSongModifier"></span>).</li>
+      </ul>
+      You can use this feature a number of times equal to your proficiency bonus (<span class="bladeSongModifier"></span>),
+      and you regain all expended uses of it when you finish a long rest.
+    </article>
+  </details>
+  <p class="width99">Darkness at 2nd level (1/day)</p>
+  <p class="width99">Hellish Rebuke at 2nd level (1/day)</p>
+  <p class="width99">120ft Devil's sight </p>
+</details><br />
+
+<script src="./js/book.js"></script>
+<script src="./js/attack.js"></script>
+<script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Open+Sans:400,800");
+
+:root {
+    --namewidth: 72px;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    margin: 1px;
+    margin-bottom: 10px;
+}
+
+.abilityScore {
+    margin: 3px;
+}
+
+.statSummary {
+    display: flex;
+    justify-content: center;
+}
+
+#statRow {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#heading {
+    height: 175px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#namebox {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    min-height: 25px;
+    border: 1px solid black;
+    border-right: 0;
+    font-size: 1.5em;
+    width: var(--namewidth);
+}
+
+#infobox {
+    /*width: calc(85vw - var(--namewidth));*/
+    grid-row: 2;
+    grid-row: 1/3;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.infoField {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: gray;
+}
+
+.infoField::before {
+    content: ' ';
+    display: block;
+    border-bottom: 1px dashed black;
+    margin-bottom: 5px;
+    width: 50%;
+    width: 100%;
+}
+
+.infoData {
+    color: black;
+    height: 1em;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+.statbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.throwbox {
+    padding-right: 5px;
+}
+
+.numberField {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    width: 2em;
+    margin: 3px;
+}
+
+.saveCheck {
+    transform: scale(1.2) rotate(45deg);
+    margin-left: 10px;
+}
+
+.saveCheck[type=checkbox]:checked::after {
+    font-size: 1.5em;
+    content: '■';
+    position: absolute;
+    top: -.35em;
+    left: .02em
+}
+
+.doubleBorders {
+    width: 100%;
+    border: 1px solid black;
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+
+details>summary {
+    list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+#speed {
+    margin-left: 1px;
+    margin-top: -10px;
+}
+
+.mainStats {
+    display: inline-grid;
+    width: 100%;
+    justify-content: space-around;
+    ;
+    justify-items: center;
+    margin-top: 25px;
+    grid-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grbg {
+    background-color: lightgray;
+}
+
+.width99 {
+    margin: 0px;
+    padding-left: 5px;
+    background-color: lightgray;
+}
+
+.ExtraInfo {
+    margin-bottom: 1px;
+    margin-left: 10px;
+}
