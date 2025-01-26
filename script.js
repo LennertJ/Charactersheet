@@ -1,5 +1,5 @@
 let level = 9
-let barki = 1050
+let barki = 550
 
 let intModifier = 4;
 let dexModifier = 3;
@@ -18,7 +18,7 @@ function formatBonus(...score) {
 
 document.getElementById("barki").innerHTML = barki;
 //blade song
-document.getElementById("acModifier").innerHTML = formatBonus(intModifier);
+document.getElementById("acModifier").innerHTML = formatBonus(intModifier+1);
 //core stats
 document.getElementById("baseAc").innerHTML = 13 + dexModifier;
 document.getElementById("hp").innerHTML = hp;
