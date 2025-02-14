@@ -23,12 +23,12 @@ document.getElementById("acModifier").innerHTML = formatBonus(intModifier);
 document.getElementById("baseAc").innerHTML = 13 + dexModifier + 1;
 document.getElementById("hp").innerHTML = hp;
 //saves
-document.getElementById("intSave").innerHTML = formatBonus(intModifier, proficiencyBonus);
-document.getElementById("dexSave").innerHTML = formatBonus(dexModifier, proficiencyBonus);
-document.getElementById("chaSave").innerHTML = formatBonus(chaModifier);
-document.getElementById("conSave").innerHTML = formatBonus(conModifier);
-document.getElementById("wisSave").innerHTML = formatBonus(wisModifier);
-document.getElementById("strSave").innerHTML = formatBonus(strModifier);
+document.getElementById("intSave").innerHTML = formatBonus(intModifier, proficiencyBonus, 1);
+document.getElementById("dexSave").innerHTML = formatBonus(dexModifier, proficiencyBonus, 1);
+document.getElementById("chaSave").innerHTML = formatBonus(chaModifier, 1);
+document.getElementById("conSave").innerHTML = formatBonus(conModifier, 1);
+document.getElementById("wisSave").innerHTML = formatBonus(wisModifier, 1);
+document.getElementById("strSave").innerHTML = formatBonus(strModifier, 1);
 //int
 document.getElementById("arcana").innerHTML = formatBonus(intModifier);
 document.getElementById("history").innerHTML = formatBonus(intModifier);
