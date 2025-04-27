@@ -1,4 +1,4 @@
-let level = 9
+let level = 10
 let barki = 550
 
 let intModifier = 4;
@@ -8,7 +8,7 @@ let conModifier = 1;
 let wisModifier = -1;
 let strModifier = 0;
 let proficiencyBonus = 4;
-let hp = 8 + 4 + 4 + 5 + 6 + 3 + 4 + 5 + 5 + (level * conModifier);
+let hp = 8 + 4 + 4 + 5 + 6 + 3 + 4 + 5 + 5 + 6 + (level * conModifier);
 
 function formatBonus(...score) {
     // sum up all scores if scores is higher than 0 add a + in front of the number if it's lower than 0 add a - in front of the number
